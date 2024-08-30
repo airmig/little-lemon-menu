@@ -30,3 +30,17 @@ class MenuItemSerializer(serializers.ModelSerializer):
     #    category, created = Category.objects.get_or_create(**category_data)
     #    menu_item = MenuItem.objects.create(category=category, **validated_data)
     #    return menu_item
+
+    #def validate_price(self, value):
+    #    if (value < 2):
+    #        raise serializers.ValidationError('Price should not be less than 2.0')
+    #def validate_stock(self, value):
+    #    if (value < 0):
+    #        raise serializers.ValidationError('Stock cannot be negative')
+    #validate several at once
+    '''def validate(self, attrs):
+        if(attrs['price']<2):
+            raise serializers.ValidationError('Price should not be less than 2.0')
+        if(attrs['inventory']<0):
+            raise serializers.ValidationError('Stock cannot be negative')
+        return super().validate(attrs)'''
