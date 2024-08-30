@@ -21,6 +21,10 @@ class MenuItemSerializer(serializers.ModelSerializer):
         model = MenuItem
         fields = ['id', 'title', 'price', 'inventory', 'category', 'category_id']
 
+        #extra_kwargs = {"price": {"min_value": 2},
+        #   "inventory": {"min_value": 0}
+        #}
+
     #def create(self, validated_data):
     #    category_data = validated_data.pop('category')
     #    category, created = Category.objects.get_or_create(**category_data)
